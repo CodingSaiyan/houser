@@ -11,6 +11,7 @@ class Dashboard extends Component {
         this.state = {
             houses: []
         }
+        this.deleteHouse = this.deleteHouse.bind(this)
     }
 
     componentDidMount() {
