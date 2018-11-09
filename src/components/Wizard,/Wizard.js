@@ -55,6 +55,7 @@ class Wizard extends Component {
         })
     }
 
+    // ADD A NEW HOUSE
     addANewHouse = () => {
         let { name, address, city, state, zip } = this.state;
         axios.post('/houses', {name, address, city, state, zip}).then(response => {
