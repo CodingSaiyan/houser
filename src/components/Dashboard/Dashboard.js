@@ -11,8 +11,6 @@ class Dashboard extends Component {
         this.state = {
             houses: []
         }
-
-        this.deleteHouse = this.deleteHouse.bind(this)
     }
 
     componentDidMount() {
@@ -23,9 +21,8 @@ class Dashboard extends Component {
         }).catch(err => {console.log(`You didn't get anything from db ${err}`)})
     }
 
-    deleteHouse = (id) => {
+    deleteHouse(id) {
         axios.delete(`/houses/${id}`).then(response => {
-
 
             this.componentDidMount()
         }).catch(err => {console.log(`You didn't delete from Dash ${err}`)})
